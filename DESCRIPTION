@@ -1,0 +1,13 @@
+Package: WassersteinGoF
+Type: Package
+Title: Wasserstein-based goodness-of-fit test
+Version: 1.0
+Date: 2020-12-09
+Author: Gilles Mordant
+Maintainer: Gilles Mordant <mordantgilles@gmail.com>
+Description: Semi-discrete computations for Wasserstein-based goodness-of-fit tests.
+License: GPL (>= 2)
+Imports: Rcpp (>= 1.0.2), RcppArmadillo, RcppEigen, pdist, doParallel, foreach
+LinkingTo: Rcpp, RcppArmadillo, RcppEigen, pdist, doParallel, foreach
+Depends: Rcpp, RcppArmadillo, RcppEigen, pdist, doParallel, foreach
+RoxygenNote: 6.1.1
