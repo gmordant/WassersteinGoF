@@ -7,7 +7,7 @@
 #' @param psi the vector of potentials
 #' @export
 Grad <- function(Mat, psi) {
-    .Call('_WassersteinGoF_Grad', PACKAGE = 'WassersteinGoF', Mat, psi)
+    .Call(`_WassersteinGoF_Grad`, Mat, psi)
 }
 
 #' Objective for OT (Internal C function)
@@ -16,7 +16,7 @@ Grad <- function(Mat, psi) {
 #' @param psi the vector of potentials
 #' @export
 Objective <- function(Mat, psi) {
-    .Call('_WassersteinGoF_Objective', PACKAGE = 'WassersteinGoF', Mat, psi)
+    .Call(`_WassersteinGoF_Objective`, Mat, psi)
 }
 
 #' SGD Algorithm for OT (Internal C function)
@@ -25,7 +25,7 @@ Objective <- function(Mat, psi) {
 #' @param Mat the cost matrix
 #' @export
 SGD_OT <- function(C, Mat) {
-    .Call('_WassersteinGoF_SGD_OT', PACKAGE = 'WassersteinGoF', C, Mat)
+    .Call(`_WassersteinGoF_SGD_OT`, C, Mat)
 }
 
 #'  Algorithm for plotting results of OT (Internal C function)
@@ -34,10 +34,10 @@ SGD_OT <- function(C, Mat) {
 #' @param psi the vector of potentials
 #' @export
 Plot <- function(Mat, psi) {
-    .Call('_WassersteinGoF_Plot', PACKAGE = 'WassersteinGoF', Mat, psi)
+    .Call(`_WassersteinGoF_Plot`, Mat, psi)
 }
 
 rGausResid <- function(n, dim) {
-    .Call('_WassersteinGoF_rGausResid', PACKAGE = 'WassersteinGoF', n, dim)
+    .Call(`_WassersteinGoF_rGausResid`, n, dim)
 }
 
