@@ -1,3 +1,7 @@
+library(pdist)
+library(doParallel)
+library(WassersteinGoF)
+
 #--------------------------------------------------------------------------------------------
 #            Example: Distance computation between a point cloud and a Reference measure
 #--------------------------------------------------------------------------------------------
@@ -22,9 +26,6 @@ WassersteinDistGaus(points, 100000, p=2)
 #--------------------------------------------------------------------------------------------
 
 
-library(pdist)
-library(doParallel)
-
 begin<-Sys.time()
 u<-generateGausWassersteinQuantile(nRep=90,samplesize=200,dim=2, p=1,B=100000, nCores=4)
 Sys.time()-begin
@@ -44,9 +45,6 @@ plot(x[,1:2])
 #--------------------------------------------------------------------------------------------
 #            Example: Generate quantiles for Gaussian family
 #--------------------------------------------------------------------------------------------
-
-library(pdist)
-library(doParallel)
 
 begin<-Sys.time()
 u<-generateGausFamWassersteinQuantile(quantiles=c(0.9,0.95),nRep=30,samplesize=200,dim=2, p=1,B=100000, nCores=4)
