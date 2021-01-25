@@ -1,4 +1,3 @@
 useDynLib(WassersteinGoF, .registration=TRUE)
 exportPattern("^[[:alpha:]]+")
 importFrom(Rcpp, evalCpp)
-
