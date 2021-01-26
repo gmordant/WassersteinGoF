@@ -10,11 +10,11 @@ Have a look at the Temp/Examples.R for a first example of certain functions to t
 
 ## Installation 
 To install the package from R you must use the two following lines.
-
+```
 library(devtools)
 
 install_github("gmordant/WassersteinGoF", ref = "main")
-
+```
 Somtimes, you need to update some packages in the process. Accept it and restart the R session before trying to use 'WassersteinGoF'.
  
 
